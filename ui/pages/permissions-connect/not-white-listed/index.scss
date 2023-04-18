@@ -1,0 +1,39 @@
+.not-white-listed{
+
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  width         : 100%;
+  margin-left   : auto;
+  margin-right  : auto;
+  height        : 100%;
+  padding-top: 40px;
+
+  &__check{
+    display: flex;
+    align-items: center;
+    margin: 100px 10px;
+    &__checkbox{
+      background: #fff;
+      border: 1px solid #cdcdcd;
+      box-sizing: border-box;
+      height: 24px;
+      width: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      border-radius: 50%;
+  
+      i{
+        color: #000000;
+      }
+    }
+
+    &__description{
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+ 
+}

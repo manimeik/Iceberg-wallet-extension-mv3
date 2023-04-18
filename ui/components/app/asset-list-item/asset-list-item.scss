@@ -1,0 +1,110 @@
+.asset-list-item {
+  display         : flex;
+  justify-content : space-between;
+  background-color: #dfdfdf;
+  padding         : 10px 20px;
+  align-items     : center;
+  color           : #000000;
+  border-bottom: 1px solid #838080;
+  &__icon-title {
+    display    : flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-left: 10px;
+    font-weight: 700;
+  }
+
+  &__heading-subheading {
+    display       : flex;
+    align-items   : center;
+    flex-direction: column;
+  }
+
+  &__heading {
+    button {
+      font-size    : 18px;
+      font-weight  : 700;
+      margin-bottom: 5px;
+      background   : none;
+      padding      : 0;
+    }
+
+  }
+
+  &__subheading {
+    font-size: 10px;
+  }
+
+
+  &__token-button {
+    padding-inline-start: 0;
+    min-width           : 0;
+    min-height          : 0;
+    text-align          : start;
+
+    & h2 {
+      display: flex;
+    }
+
+    & span {
+      padding-right: 5px;
+    }
+  }
+
+  &__token-value {
+    flex         : 1;
+    padding-right: 5px;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+    max-width    : 100%;
+    display      : block;
+    overflow     : hidden;
+  }
+
+
+  .list-item__right-content {
+    align-self: center;
+  }
+
+  .list-item__subheading {
+    @include H6;
+
+    margin-top: 6px;
+  }
+
+  &__warning {
+    flex       : 1;
+    margin-left: 8px;
+  }
+
+  & &__send-token-button {
+    @include H6;
+
+    display       : none;
+    text-transform: uppercase;
+    width         : fit-content;
+    padding-top   : 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $break-large) {
+    &__warning-tooltip {
+      display: none;
+    }
+
+    .list-item__mid-content {
+      display: flex;
+    }
+
+    &:hover &__send-token-button,
+    &:focus-within &__send-token-button {
+      display: inline-block;
+    }
+
+    &__chevron-right {
+      display: none;
+    }
+  }
+}

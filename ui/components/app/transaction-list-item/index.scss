@@ -1,0 +1,72 @@
+.transaction-list-item {
+  background-color: #201f1f !important;
+
+ .list-item__heading {
+    color: #ffffff;
+}
+  &__primary-currency {
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__secondary-currency {
+    @include H7;
+
+    margin-top: 4px;
+    color: #fff;
+  }
+
+  & &--unconfirmed {
+    color: #fff;
+  }
+
+  &--unconfirmed &__primary-currency {
+    color: #fff;
+  }
+
+  &__pending-actions {
+    padding-top: 12px;
+    display: flex;
+
+    .button {
+      @include H8;
+
+      padding: 8px;
+      width: 75px;
+      white-space: nowrap;
+    }
+
+    & > .button:first-child {
+      margin-right: 6px;
+    }
+
+    &:empty {
+      padding-top: 0;
+    }
+  }
+
+  .list-item__subheading > h3 {
+    overflow: visible;
+    display: flex;
+    white-space: nowrap;
+    text-overflow: initial;
+  }
+
+  .transaction-status::after {
+    content: "·";
+    margin: 0 4px;
+  }
+
+  &__origin,
+  &__address {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__origin {
+    /*rtl:ignore*/
+    direction: rtl;
+  }
+}

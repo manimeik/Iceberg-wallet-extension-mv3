@@ -1,0 +1,67 @@
+.selected-account {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+
+  &__tooltip-wrapper {
+    width: 100%;
+  }
+
+  &__name-icon {
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 5px;
+    margin-top   : 15px;
+  }
+
+  &__name {
+    @include H5;
+    width        : 100%;
+    font-weight  : 500;
+    color        : #ffffff;
+    text-overflow: ellipsis;
+    overflow     : hidden;
+    white-space  : nowrap;
+    text-align   : center;
+    max-width    : 80px;
+  }
+
+  &__icon {
+    width      : 27px;
+    margin-left: 8px;
+  }
+
+  &__address {
+    @include H7;
+    color           : #11192F;
+    display         : flex;
+    align-items     : center;
+    background-color: rgba(255, 255, 255, 0.53);
+    border-radius   : 0 20px 20px 0;
+    padding         : 5px 15px;
+
+    &:hover {
+      background-color: #7CD8FF;
+    }
+  }
+
+  &__clickable {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+    margin          : 4px 0;
+    padding         : 6px 1px;
+    border-radius   : 10px;
+    cursor          : pointer;
+    width           : 100%;
+    background-color: unset;
+  }
+
+  &__copy {
+    display    : flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,26 @@
+.seed-phrase-intro {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+ &__content{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+ }
+  &__copy {
+    max-width: 696px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    font-size: 20px;
+  }
+
+  &__button{
+    background-color: #009FE3;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 700;
+  }
+}

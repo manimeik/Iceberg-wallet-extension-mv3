@@ -1,0 +1,116 @@
+.reveal-seed-phrase {
+  max-width : 450px;
+  background: #11192F;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.25);
+  margin    : auto;
+  padding   : 40px 20px;
+  color     : #ffffff;
+
+  &__go-back {
+    color: #7CD8FF;;
+  }
+
+  &__header {
+    font-size  : 32px;
+    font-family: Metropolis;
+    font-weight: 700;
+  }
+
+  &__text-block {
+    font-size  : 14px;
+    font-family: Roboto;
+    font-weight: 400;
+    margin-top : 30px;
+    white-space: pre-line;
+  }
+
+  &__secret {
+    position        : relative;
+    display         : flex;
+    justify-content : center;
+    background-color: #ffffff;
+    padding         : 18px;
+    margin-top      : 36px;
+    margin-bottom   : 36px
+  }
+
+  &__secret-words {
+    @include H4;
+    text-align: center;
+    color     : #000000;
+
+    &--hidden {
+      filter: blur(5px);
+    }
+  }
+
+  &__copy {
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 30px;
+    cursor       : pointer;
+
+    img {
+      margin-right: 20px;
+    }
+  }
+
+  &__secret-blocker {
+    position        : absolute;
+    top             : 0;
+    bottom          : 0;
+    height          : 100%;
+    width           : 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display         : flex;
+    flex-flow       : column nowrap;
+    align-items     : center;
+    justify-content : center;
+    padding         : 8px 0 18px;
+    cursor          : pointer;
+  }
+
+  &__checkbox-container {
+    display      : flex;
+    margin-bottom: 30px;
+    cursor       : pointer;
+  }
+
+  &__checkbox {
+    background     : #fff;
+    border         : 1px solid #cdcdcd;
+    box-sizing     : border-box;
+    height         : 20px;
+    width          : 20px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin-right   : 10px;
+
+    &:hover {
+      border: 1.5px solid #2f9ae0;
+    }
+
+    .fa-check {
+      color: #2f9ae0;
+    }
+  }
+
+  &__reveal-button {
+    @include H7;
+
+    color      : #ffffff;
+    font-weight: 500;
+    margin-top : 8px;
+    text-align : center;
+  }
+
+
+  &__button {
+    margin-top      : 10px;
+    background-color: #7CD8FF;;
+    color           : #ffffff;
+    font-size       : 20px;
+    font-weight     : 700;
+  }
+}

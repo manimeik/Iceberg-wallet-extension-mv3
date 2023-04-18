@@ -1,0 +1,160 @@
+@import 'welcome/index';
+@import 'select-action/index';
+@import 'seed-phrase/index';
+@import 'end-of-flow/index';
+@import 'metametrics-opt-in/index';
+@import 'create-password/import-with-seed-phrase/index';
+
+
+.first-time-flow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    padding: 40px 100px;
+    @media screen and (min-width: $break-large) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .app-header__metafox-logo {
+      margin-bottom: 40px;
+
+      @media screen and (max-width: $break-small) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__create-password{
+    height: 100%;
+  }
+
+  &__form-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__create-btn{
+    background-color: #009FE3;
+    margin: 35px 0 50px;
+    border-radius: 20px;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+
+
+  &__import,
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    margin: auto;
+  }
+  &__create-back>a {
+    position        : absolute;
+    top             : 30px;
+    right           : 20%;
+    background-color: rgb(218 212 212);
+    border-radius   : 30px;
+    display         : flex;
+    align-items     : center;
+
+    img {
+      border-radius   : 50%;
+      background-color: #ffffff;
+      padding         : 10px;
+    }
+  
+    span {
+      color      : #000000;
+      padding    : 0 25px 0 15px;
+      font-size  : 18px;
+      font-weight: 600;
+      font-family: Roboto;
+    }
+  }
+
+  &__header {
+    @include H1;
+
+    margin-bottom: 24px;
+    color: var(--color-text-default);
+  }
+
+  &__input {
+    max-width: 350px;
+  }
+
+  &__text-block {
+    margin-bottom: 24px;
+    color: var(--color-text-default);
+
+    @media screen and (max-width: $break-small) {
+      @include H6;
+
+      margin-bottom: 16px;
+    }
+  }
+
+  &__button {
+    margin: 35px 0 14px;
+    width: 170px;
+    height: 44px;
+  }
+
+  &__checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  &__checkbox {
+    background: var(--color-background-default);
+    border: 1px solid var(--color-border-muted);
+    box-sizing: border-box;
+    height: 34px;
+    width: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      border: 1.5px solid var(--color-primary-alternative);
+    }
+
+    .fa-check {
+      color: var(--color-primary-default);
+    }
+  }
+
+  &__checkbox-label {
+    @include H4;
+
+    color: var(--color-text-alternative);
+    margin-left: 18px;
+  }
+
+  &__link-text {
+    color: var(--color-primary-default);
+  }
+}
+
+.first-time-flow__wrapper.intro {
+  @media screen and (min-width: $break-large) {
+    max-width: 1010px;
+  }
+
+  @media screen and (max-width: 1010px) {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,137 @@
+.select-action {
+  width: 100%;
+  padding: 40px 100px;
+  @media screen and (max-width:1439px) {
+    padding: 40px 40px; 
+  }
+
+  .app-header__logo-container {
+    // width: 742px;
+    // margin-top: 3%;
+  }
+  &__rectangles{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    &__rectangle{
+      width: 200px;
+      height: 200px;
+      border: 10px solid #ffffff;
+      transform: translate(-50%, -50%) rotate(45deg) ;
+      transform-origin: center;
+      position: absolute;
+     &:nth-child(2){
+       left: -50px
+     }
+     &:nth-child(3){
+       left: 50px;
+     }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__body-header {
+    @include H3;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 65px;
+    color:#f2f3f4;
+
+  }
+
+  &__body-content {
+    @include H5;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 15px;
+    color:#f2f3f4;
+
+    white-space: pre-line;
+  }
+
+  &__select-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+  }
+
+  &__select-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+   width: 480px;
+   padding:36px 10px;
+    background:#ffffff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    @media screen and (max-width:1194px) {
+      width: 450px;
+    }
+    @media screen and (max-width:1050px) {
+      width: 400px;
+    }
+    @media screen and (max-width:950px) {
+      width: 320px;
+      padding:30px 3px;
+    }
+
+    .first-time-flow__button {
+      max-width: 221px;
+      height: 44px;
+      background-color: #009FE3;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      font-family: Roboto;
+    }
+  }
+
+  &__button-symbol {
+    color: #c4c4c4;
+    margin-top: 41px;
+  }
+
+  &__button-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 144px;
+  }
+
+  &__button-text-big {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+     color: #000000;
+     margin-top: 12px;
+     text-align: center;
+  }
+
+  &__button-text-small {
+    font-size: 18px;
+    color: #948F8F;
+    margin-top: 23px;
+    text-align: center;
+  }
+
+  button {
+    font-weight: 500;
+    width: 221px;
+  }
+}

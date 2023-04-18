@@ -1,0 +1,51 @@
+.menu-bar {
+  display           : flex;
+  justify-content   : space-between;
+  align-items       : center;
+  height            : 64px;
+
+
+  .menu-bar__account-options {
+    background: none;
+    font-size : inherit;
+    padding   : 0 12px 0 5px;
+    place-self: center end;
+    color     : #f3fcf5;
+  }
+
+
+  &__network-component-wrapper {
+    margin-right: 10px;
+  }
+
+  &__network-down-arrow {
+    background-image   : url(/images/icons/caret-down.svg);
+    background-repeat  : no-repeat;
+    background-size    : contain;
+    background-position: center;
+  }
+
+  &__network .selected-account {
+    grid-column: 2 / span 1;
+    place-self : center stretch;
+  }
+}
+
+.account-options-menu {
+  top: 21px !important;
+
+  &__connected-sites::before {
+    content            : "";
+    background-image   : url(/images/icons/connected-sites.svg);
+    background-size    : contain;
+    background-repeat  : no-repeat;
+    background-position: center;
+    padding            : 8px;
+  }
+
+  &__explorer-origin {
+    @include H7;
+
+    color: Grey;
+  }
+}

@@ -1,0 +1,125 @@
+@import 'confirm-page-container-warning/index';
+@import 'confirm-page-container-summary/index';
+
+.confirm-page-container-content {
+  overflow-y: auto;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  &--with-top-border {
+    border-top: 1px solid var(--color-border-muted);
+  }
+
+  &__error-container {
+    padding: 0 16px 16px 16px;
+  }
+
+  &__details {
+    box-sizing: border-box;
+    padding         : 0 20px;
+    margin          : 0 10px;
+    background-color: #000000;
+  }
+
+  &__data {
+    padding: 16px;
+    color: #fff;
+
+    & > .disclosure {
+      margin-top: 0;
+    }
+  }
+
+  &__data-box {
+    @include H7;
+
+    background-color: #000;
+    padding: 12px;
+    word-wrap: break-word;
+    overflow-y: auto;
+
+    &-label {
+      @include H7;
+
+      text-transform: uppercase;
+      padding: 8px 0 12px;
+    }
+  }
+
+  &__sending-detail {
+    background: #000000;
+    padding   : 20px;
+    margin    : 30px 10px 20px;
+
+    &__row {
+      display        : flex;
+      justify-content: space-between;
+      margin         : 15px 0;
+    }
+  }
+
+  &__data-field {
+    display: flex;
+    flex-direction: row;
+
+    &-label {
+      font-weight: 500;
+      padding-right: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__gas-fee {
+    border-bottom: 1px solid var(--color-border-muted);
+
+    .advanced-gas-inputs__gas-edit-rows {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__function-type {
+    @include H6;
+
+    font-weight: 500;
+    text-transform: capitalize;
+    color:#fff;
+    padding-left: 5px;
+  }
+
+  &__tab {
+    @include H7;
+
+    color: var(--color-text-alternative);
+    text-transform: uppercase;
+    margin: 0 8px;
+
+    & button {
+      font-size: unset;
+      color: var(--color-text-alternative);
+      text-transform: uppercase;
+    }
+  }
+
+  .page-container__footer {
+    margin-top: auto;
+  }
+
+  &__currency-container,
+  &__total-amount,
+  &__total-value {
+    position: relative;
+  }
+
+  &__link {
+    background: transparent;
+    border: 0 transparent;
+    display: inline;
+    padding: 0;
+    font-size: $font-size-h7;
+  }
+}

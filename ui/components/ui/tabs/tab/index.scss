@@ -1,0 +1,24 @@
+.tab {
+  border-radius: 15px;
+
+  button {
+    cursor             : pointer;
+    padding            : 8px 16px !important;
+    min-width          : 50px;
+    text-align         : center;
+    display            : block;
+    width              : 100%;
+    background-color   : unset;
+    font-size          : 20px;
+    color              : #ffffff;
+    // border          : 2px solid $Blue-904;
+    background-color   : transparent;
+    border-radius      : 15px;
+    font-size          : 16px;
+  }
+
+  &--active {
+    background-color: #009FE3;
+    border          : none;
+  }
+}
